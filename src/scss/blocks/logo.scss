@@ -2,7 +2,7 @@
   display: block;
   margin: auto;
 
-  &>a {
+  &> a {
     color: #fff;
     text-decoration: none;
     font-family: $logo-font;
@@ -12,9 +12,10 @@
 }
 
 @media (min-width: $screen-md) {
+
   .logo {
 
-    &>a {
+    &> a {
       font-size: 40px;
       line-height: 50px;
     }
