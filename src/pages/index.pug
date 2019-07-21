@@ -8,13 +8,46 @@ block meta
 //-   link(rel='stylesheet', href='css/some.css')
 
 block content
-  .text
-    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, libero! Voluptatum ducimus tempore ad esse, pariatur praesentium cum nobis nisi laborum alias placeat facere assumenda quidem minus minima fuga. Fugit!
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusamus. Culpa itaque optio quis animi et fugit praesentium beatae quas?
-    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti temporibus eveniet dolorum similique quidem accusantium, possimus aspernatur harum facilis minima iusto excepturi ducimus cumque explicabo.
-    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dignissimos! Voluptas consequatur repudiandae harum doloremque nam in eius hic dicta? Debitis rem nostrum dolorum laudantium placeat fugit quasi blanditiis libero voluptates eum, consectetur molestiae fuga, velit doloremque. Quos, delectus? Suscipit.
-  .partners
-
+  ul.sections-list
+    li.sections-list__item(data-name='about' data-num='0')
+      .flex-container.flex-container--around.flex-container--space
+        .logo
+          a(href="/") Alacrity lab.
+      .page__content-container
+        .text
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, libero! Voluptatum ducimus tempore ad esse, pariatur praesentium cum nobis nisi laborum alias placeat facere assumenda quidem minus minima fuga. Fugit!
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusamus. Culpa itaque optio quis animi et fugit praesentium beatae quas?
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti temporibus eveniet dolorum similique quidem accusantium, possimus aspernatur harum facilis minima iusto excepturi ducimus cumque explicabo.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dignissimos! Voluptas consequatur repudiandae harum doloremque nam in eius hic dicta? Debitis rem nostrum dolorum laudantium placeat fugit quasi blanditiis libero voluptates eum, consectetur molestiae fuga, velit doloremque. Quos, delectus? Suscipit.
+        .partners
+    li.sections-list__item(data-name='work' data-num='1')
+      .flex-container.flex-container--around.flex-container--space
+        .logo
+          a(href="/") Alacrity lab.
+      .page__content-container
+        .text
+          p Our work
+    li.sections-list__item(data-name='team' data-num='2')
+      .flex-container.flex-container--around.flex-container--space
+        .logo
+          a(href="/") Alacrity lab.
+      .page__content-container
+        .text
+          p Team
+    li.sections-list__item(data-name='skills' data-num='3')
+      .flex-container.flex-container--around.flex-container--space
+        .logo
+          a(href="/") Alacrity lab.
+      .page__content-container
+        .text
+          p Skills
+    li.sections-list__item(data-name='contact' data-num='4')
+      .flex-container.flex-container--around.flex-container--space
+        .logo
+          a(href="/") Alacrity lab.
+      .page__content-container
+        .text
+          p Contact us
 //- block footer
 //-   p footer
 

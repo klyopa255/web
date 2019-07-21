@@ -23,42 +23,37 @@ html(class='page  no-js', lang='ru')
 
       .page__content
         ul.main-nav
-          li.main-nav__item
-            span.main-nav__icon.main-nav__icon--active
-            a.main-nav__linc.main-nav__linc--active(href="") About
-          li.main-nav__item
+          li.main-nav__item(data-name='about' data-num='0')
             span.main-nav__icon
-            a.main-nav__linc(href="") Our work
-          li.main-nav__item
+            a.main-nav__linc(href="#about") About
+          li.main-nav__item(data-name='work' data-num='1')
             span.main-nav__icon
-            a.main-nav__linc(href="") Team
-          li.main-nav__item
+            a.main-nav__linc(href="#work") Our work
+          li.main-nav__item(data-name='team' data-num='2')
             span.main-nav__icon
-            a.main-nav__linc(href="") Skills
-          li.main-nav__item
+            a.main-nav__linc(href="#team") Team
+          li.main-nav__item(data-name='skills' data-num='3')
             span.main-nav__icon
-            a.main-nav__linc(href="") Contact us
+            a.main-nav__linc(href="#skills") Skills
+          li.main-nav__item(data-name='contact' data-num='4')
+            span.main-nav__icon
+            a.main-nav__linc(href="#contact") Contact us
 
         .page__content-wrapper
 
-          block header
-            .flex-container.flex-container--around.flex-container--space
-              .logo
-                a(href="/") Alacrity lab.
-          .page__content-container
             block content
               p Cодержимое
 
-        ul.main-nav.main-nav--right
-          li.main-nav__item
+        ul.mirror-nav
+          li.mirror-nav__item(data-name='about' data-num='0')
             span.main-nav__icon
-          li.main-nav__item
+          li.mirror-nav__item(data-name='work' data-num='1')
             span.main-nav__icon
-          li.main-nav__item
+          li.mirror-nav__item(data-name='team' data-num='2')
             span.main-nav__icon
-          li.main-nav__item
+          li.mirror-nav__item(data-name='skills' data-num='3')
             span.main-nav__icon
-          li.main-nav__item
+          li.mirror-nav__item(data-name='contact' data-num='4')
             span.main-nav__icon
 
       .page__footer
@@ -66,7 +61,7 @@ html(class='page  no-js', lang='ru')
           .swipe
             button.swipe__button.swipe__button--top
             span.swipe__text Swipe
-            button.swipe__button
+            button.swipe__button.swipe__button--bottom
         .flex-container
           .footer-contact
             a.linc.footer-contact__linc(href="#") Contact us

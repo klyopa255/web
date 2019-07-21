@@ -1,4 +1,4 @@
-.main-nav {
+.main-nav, .mirror-nav {
   list-style: none;
   padding: 0;
   margin: auto 0;
@@ -10,6 +10,27 @@
     align-items: center;
     height: 10px;
     margin-bottom: 10px;
+
+    &--active {
+
+      & > .main-nav__icon {
+        
+        &::after {
+          position: absolute;
+          content: '';
+          background-color: #fff;
+          width: 4px;
+          height: 4px;
+          top: 2px;
+          left: 2px;
+          border-radius: 50%;
+        }
+      }
+
+      & > .main-nav__linc {
+        opacity: 1;
+      }
+    }
   }
 
   &__icon {
@@ -20,20 +41,6 @@
     border-radius: 50%;
     border: 1px solid #fff;
     margin-right: 5px;
-
-    &--active {
-
-      &::after {
-        position: absolute;
-        content: '';
-        background-color: #fff;
-        width: 4px;
-        height: 4px;
-        top: 2px;
-        left: 2px;
-        border-radius: 50%;
-      }
-    }
   }
 
   &__linc {
@@ -43,25 +50,21 @@
     text-decoration: none;
     cursor: pointer;
     opacity: .6;
-
-    &--active {
-      opacity: 1;
-    }
   }
+}
 
-  &--right {
-    margin-left: 0;
-    margin-right: 10px;
+.mirror-nav {
+  margin-left: 0;
+  margin-right: 10px;
 
-    & .main-nav__icon {
-      margin: auto;
-    }
+  &__icon {
+    margin: auto;
   }
 }
 
 @media (min-width: $screen-md) {
 
-  .main-nav {
+  .main-nav, .mirror-nav {
     margin-left: 30px;
     min-width: 105px;
 
@@ -81,11 +84,11 @@
         display: block;
       }
     }
+  }
 
-    &--right {
-      margin-left: 0;
-      margin-right: 30px;
-      min-width: auto;
-    }
+  .mirror-nav {
+    margin-left: 0;
+    margin-right: 30px;
+    min-width: auto;
   }
 }
