@@ -1,0 +1,82 @@
+//- Стандартный шаблон страницы
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script.
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner.page__inner--column
+
+      .page__content
+        ul.main-nav
+          li.main-nav__item
+            span.main-nav__icon.main-nav__icon--active
+            a.main-nav__linc.main-nav__linc--active(href="") About
+          li.main-nav__item
+            span.main-nav__icon
+            a.main-nav__linc(href="") Our work
+          li.main-nav__item
+            span.main-nav__icon
+            a.main-nav__linc(href="") Team
+          li.main-nav__item
+            span.main-nav__icon
+            a.main-nav__linc(href="") Skills
+          li.main-nav__item
+            span.main-nav__icon
+            a.main-nav__linc(href="") Contact us
+
+        .page__content-wrapper
+
+          block header
+            .flex-container.flex-container--around.flex-container--space
+              .logo
+                a(href="/") Alacrity lab.
+          .page__content-container
+            block content
+              p Cодержимое
+
+        ul.main-nav.main-nav--right
+          li.main-nav__item
+            span.main-nav__icon
+          li.main-nav__item
+            span.main-nav__icon
+          li.main-nav__item
+            span.main-nav__icon
+          li.main-nav__item
+            span.main-nav__icon
+          li.main-nav__item
+            span.main-nav__icon
+
+      .page__footer
+        .flex-container.flex-container--around
+          .swipe
+            button.swipe__button.swipe__button--top
+            span.swipe__text Swipe
+            button.swipe__button
+        .flex-container
+          .footer-contact
+            a.linc.footer-contact__linc(href="#") Contact us
+            a.linc.footer-contact__text(href="#") press [space] to contact us
+          .copy
+            p © Alacrity lab. 2017-2020
+            p All Rights Reserved.
+            .copy__img
+              img(src="/img/jap.svg", alt="")
+
+    block page-bottom
+      script(src='js/vendors.min.js')
+      script(src='js/script.min.js')

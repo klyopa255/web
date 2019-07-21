@@ -1,0 +1,21 @@
+.footer-contact {
+
+  &__text {
+    display: none;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .footer-contact {
+
+    &__linc {
+      display: none;
+    }
+
+    &__text {
+      font-size: 23px;
+      line-height: 30px;
+      display: block;
+    }
+  }
+}

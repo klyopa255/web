@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: $font; 
+  background-image: url('/img/Bitmap.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1px;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+
+  &--around {
+    justify-content: space-around;
+  }
+
+  &--space {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}

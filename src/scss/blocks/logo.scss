@@ -1,0 +1,22 @@
+.logo {
+  display: block;
+  margin: auto;
+
+  &>a {
+    color: #fff;
+    text-decoration: none;
+    font-family: $logo-font;
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .logo {
+
+    &>a {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+}

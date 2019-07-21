@@ -1,0 +1,13 @@
+.partners {
+  height: 60px;
+  background-color: rgba(216, 216, 216, 0.4);
+  margin-left: -50px;
+  width: calc(100vw - 30px);
+}
+
+@media (min-width: $screen-md) {
+  .partners {
+    width: calc(100vw - 97px);
+    height: 135px;
+  }
+}
