@@ -213,5 +213,6 @@ const alacrityApp = {
 
 ready(function () {
   console.log('DOM ready');
+  particlesJS("particles-js", "/assets/particlesjs-config.json");
   alacrityApp.run();
 });

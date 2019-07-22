@@ -1,6 +1,6 @@
 'use strict';
 
-const dir =  {
+const dir = {
   src: './src/',
   build: './build/',
 };
@@ -32,7 +32,7 @@ function compilePug() {
     .pipe(prettyHtml({
       indent_size: 2,
       indent_char: ' ',
-      unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br', ],
+      unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br',],
       content_unformatted: [],
     }))
     .pipe(replace(/^(\s*)(<button.+?>)(.*)(<\/button>)/gm, '$1$2\n$1  $3\n$1$4'))
@@ -53,7 +53,7 @@ function compileStyles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({browsers: ['last 2 version']}),
+      autoprefixer({ browsers: ['last 2 version'] }),
     ]))
     .pipe(sourcemaps.write('/'))
     .pipe(dest(dir.build + 'css/'))
@@ -70,7 +70,7 @@ function processJs() {
       }
     }))
     .pipe(babel({
-        presets: ['@babel/env']
+      presets: ['@babel/env']
     }))
     .pipe(uglify())
     .pipe(concat('script.min.js'))
@@ -80,8 +80,8 @@ exports.processJs = processJs;
 
 function copyJsVendors() {
   return src([
-      'node_modules/svg4everybody/dist/svg4everybody.min.js'
-    ])
+    'node_modules/svg4everybody/dist/svg4everybody.min.js'
+  ])
     .pipe(concat('vendors.min.js'))
     .pipe(dest(dir.build + 'js/'))
 }
@@ -97,6 +97,12 @@ function copyFonts() {
     .pipe(dest(dir.build + 'fonts/'));
 }
 exports.copyFonts = copyFonts;
+
+function copyAssets() {
+  return src(dir.src + 'assets/*')
+    .pipe(dest(dir.build + 'assets/'));
+}
+exports.copyFonts = copyAssets;
 
 function clean() {
   return del(dir.build)
@@ -129,6 +135,6 @@ function serve() {
 
 exports.default = series(
   clean,
-  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, copyFonts),
+  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, copyFonts, copyAssets),
   serve
 );

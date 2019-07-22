@@ -1,8 +1,10 @@
 .page {
 
   &__inner {
+    position: relative;
     display: flex;
     height: 100%;
+    z-index: 1;
 
     &--column {
       flex-direction: column;
