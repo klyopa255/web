@@ -25,29 +25,101 @@ block content
         .logo
           a(href="/") Alacrity lab.
       .page__content-container
-        .text
-          p Our work
+        ul.squares
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
+          li.squares__item
+            .squares__img
+            span.squares__name Project name
     li.sections-list__item(data-name='team' data-num='2')
       .flex-container.flex-container--around.flex-container--space
         .logo
           a(href="/") Alacrity lab.
       .page__content-container
-        .text
-          p Team
+        ul.squares
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
+          li.squares__item
+            .squares__img
+            span.squares__name Team member
     li.sections-list__item(data-name='skills' data-num='3')
       .flex-container.flex-container--around.flex-container--space
         .logo
           a(href="/") Alacrity lab.
       .page__content-container
-        .text
-          p Skills
+        ul.skills
+          li.skills__item.skills__item--single
+            span.skills__title Design
+            span.skills__descr Observe
+          li.skills__item.skills__item--dual
+            span.skills__title Development
+            span.skills__descr Explore
+          li.skills__item.skills__item--dual
+            span.skills__title Security
+            span.skills__descr Test
+          li.skills__item.skills__item--single
+            span.skills__title Production
+            span.skills__descr Viev
     li.sections-list__item(data-name='contact' data-num='4')
       .flex-container.flex-container--around.flex-container--space
         .logo
           a(href="/") Alacrity lab.
       .page__content-container
-        .text
-          p Contact us
+        .contact
+          .contact__title Contact us
+          form.contact__form
+            label(for="topic") Topic
+            input#topic(type="text" name="topic")
+            label(for="language") Prefered language
+            input#language(type="text" name="language")
+            label(for="email") Email
+            input#email(type="text" name="email")
+            label(for="name") Name
+            input#name(type="text" name="name")
+            label(for="company") Company
+            input#company(type="text" name="company")
+            label(for="message") Your message here
+            textarea#message(name="message", cols="19", rows="5")
+            input(type="submit" value="Send")
+
 //- block footer
 //-   p footer
 

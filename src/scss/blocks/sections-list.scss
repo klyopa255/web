@@ -2,8 +2,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-	width: 100%;
-	owerflow: hidden;
+  width: 100%;
+  margin-left: 6px;
 
 	&__item {
     display: none;
@@ -12,4 +12,11 @@
 			display: block;
 		}
 	}
+}
+
+@media (min-width: $screen-md) {
+
+  .sections-list {
+    margin-left: -39px;
+  }
 }

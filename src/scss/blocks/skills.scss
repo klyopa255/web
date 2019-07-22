@@ -1,0 +1,54 @@
+.skills {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &--single {
+      width: 100%;
+    }
+
+    &--dual {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    font-size: 8px;
+    line-height: 10px;
+    opacity: .6;
+  }
+}
+
+@media (min-width: $screen-md) {
+
+  .skills {
+    
+    &__item {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__descr {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

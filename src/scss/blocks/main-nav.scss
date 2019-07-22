@@ -13,7 +13,7 @@
 
     &--active {
 
-      & > .main-nav__icon {
+      & > .main-nav__icon, & > .mirror-nav__icon {
         
         &::after {
           position: absolute;
